@@ -1,23 +1,41 @@
 # See https://help.github.com/ignore-files/ for more about ignoring files.
 
 # compiled output
-/dist/
-/tmp/
+/udaciMeals/dist/
+/udaciMeals/tmp/
+
+/Quiz-Ember-Routes/dist/
+/Quiz-Ember-Routes/tmp/
 
 # dependencies
-/bower_components/
-/node_modules/
+/udaciMeals/bower_components/
+/udaciMeals/node_modules/
+
+/Quiz-Ember-Routes/bower_components/
+/Quiz-Ember-Routes/node_modules/
 
 # misc
-/.sass-cache
-/connect.lock
-/coverage/
-/libpeerconnection.log
-/npm-debug.log*
-/testem.log
-/yarn-error.log
+/udaciMeals/.sass-cache
+/udaciMeals/connect.lock
+/udaciMeals/coverage/
+/udaciMeals/libpeerconnection.log
+/udaciMeals/npm-debug.log*
+/udaciMeals/testem.log
+/udaciMeals/yarn-error.log
+
+/Quiz-Ember-Routes/.sass-cache
+/Quiz-Ember-Routes/connect.lock
+/Quiz-Ember-Routes/coverage/
+/Quiz-Ember-Routes/libpeerconnection.log
+/Quiz-Ember-Routes/npm-debug.log*
+/Quiz-Ember-Routes/testem.log
+/Quiz-Ember-Routes/yarn-error.log
 
 # ember-try
-/.node_modules.ember-try/
-/bower.json.ember-try
-/package.json.ember-try
+/udaciMeals/.node_modules.ember-try/
+/udaciMeals/bower.json.ember-try
+/udaciMeals/package.json.ember-try
+
+/Quiz-Ember-Routes/.node_modules.ember-try/
+/Quiz-Ember-Routes/bower.json.ember-try
+/Quiz-Ember-Routes/package.json.ember-try
