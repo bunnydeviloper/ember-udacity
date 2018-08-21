@@ -44,6 +44,11 @@ define('udaci-meals/tests/app.lint-test', [], function () {
     assert.expect(1);
     assert.ok(true, 'routes/menu.js should pass ESLint\n\n');
   });
+
+  QUnit.test('services/order-manager.js', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'services/order-manager.js should pass ESLint\n\n');
+  });
 });
 define('udaci-meals/tests/integration/components/menu-item-test', ['qunit', 'ember-qunit', '@ember/test-helpers'], function (_qunit, _emberQunit, _testHelpers) {
   'use strict';
@@ -144,6 +149,11 @@ define('udaci-meals/tests/tests.lint-test', [], function () {
     assert.expect(1);
     assert.ok(true, 'unit/routes/menu-test.js should pass ESLint\n\n');
   });
+
+  QUnit.test('unit/services/order-manager-test.js', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/services/order-manager-test.js should pass ESLint\n\n');
+  });
 });
 define('udaci-meals/tests/unit/routes/item-test', ['qunit', 'ember-qunit'], function (_qunit, _emberQunit) {
   'use strict';
@@ -178,6 +188,19 @@ define('udaci-meals/tests/unit/routes/menu-test', ['qunit', 'ember-qunit'], func
     (0, _qunit.test)('it exists', function (assert) {
       let route = this.owner.lookup('route:menu');
       assert.ok(route);
+    });
+  });
+});
+define('udaci-meals/tests/unit/services/order-manager-test', ['qunit', 'ember-qunit'], function (_qunit, _emberQunit) {
+  'use strict';
+
+  (0, _qunit.module)('Unit | Service | order-manager', function (hooks) {
+    (0, _emberQunit.setupTest)(hooks);
+
+    // Replace this with your real tests.
+    (0, _qunit.test)('it exists', function (assert) {
+      let service = this.owner.lookup('service:order-manager');
+      assert.ok(service);
     });
   });
 });
