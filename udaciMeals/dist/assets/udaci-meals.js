@@ -27,8 +27,19 @@
     value: true
   });
   exports.default = Ember.Component.extend({
+    orderManager: Ember.inject.service('order-manager'),
     classNames: ['menu-item'],
-    tagName: 'li'
+    tagName: 'li',
+    mealCategory: 'breakfast',
+    actions: {
+      changeCategory(category) {
+        this.set('mealCategory', category);
+      },
+      chooseItem(menuItemName) {
+        this.get('orderManager').chooseMenuOption(this.get('mealCategory'), menuItemName);
+      }
+    }
+
   });
 });
 ;define('udaci-meals/components/order-tracker', ['exports'], function (exports) {
@@ -332,7 +343,7 @@
   Object.defineProperty(exports, "__esModule", {
     value: true
   });
-  exports.default = Ember.HTMLBars.template({ "id": "8+8SkHNj", "block": "{\"symbols\":[\"&default\"],\"statements\":[[7,\"h4\"],[9],[1,[23,[\"item\",\"name\"]],false],[10],[0,\"\\n\"],[7,\"img\"],[12,\"src\",[28,[\"/assets/images/\",[23,[\"item\",\"image\"]]]]],[12,\"alt\",[28,[[23,[\"item\",\"name\"]]]]],[9],[10],[0,\"\\n\"],[7,\"p\"],[9],[0,\"\\n  \"],[4,\"link-to\",[\"item\",[23,[\"item\",\"id\"]]],null,{\"statements\":[[0,\"Detail\"]],\"parameters\":[]},null],[0,\"\\n\"],[10],[0,\"\\n\\n\"],[14,1],[0,\"\\n\"]],\"hasEval\":false}", "meta": { "moduleName": "udaci-meals/templates/components/menu-item.hbs" } });
+  exports.default = Ember.HTMLBars.template({ "id": "nRhj5qky", "block": "{\"symbols\":[\"&default\"],\"statements\":[[7,\"h4\"],[9],[1,[23,[\"item\",\"name\"]],false],[10],[0,\"\\n\"],[7,\"img\"],[12,\"src\",[28,[\"/assets/images/\",[23,[\"item\",\"image\"]]]]],[12,\"alt\",[28,[[23,[\"item\",\"name\"]]]]],[9],[10],[0,\"\\n\"],[7,\"div\"],[9],[0,\"\\n  \"],[7,\"select\"],[12,\"onchange\",[27,\"action\",[[22,0,[]],\"changeCategory\"],[[\"value\"],[\"target.value\"]]]],[9],[0,\"\\n    \"],[7,\"option\"],[11,\"value\",\"breakfast\"],[9],[0,\"Breakfast\"],[10],[0,\"\\n    \"],[7,\"option\"],[11,\"value\",\"lunch\"],[9],[0,\"Lunch\"],[10],[0,\"\\n    \"],[7,\"option\"],[11,\"value\",\"dinner\"],[9],[0,\"Dinner\"],[10],[0,\"\\n  \"],[10],[0,\"\\n  \"],[7,\"button\"],[3,\"action\",[[22,0,[]],\"chooseItem\",[23,[\"item\",\"name\"]]]],[9],[0,\"Select Item\"],[10],[0,\"\\n\"],[10],[0,\"\\n\"],[7,\"p\"],[9],[0,\"\\n  \"],[4,\"link-to\",[\"item\",[23,[\"item\",\"id\"]]],null,{\"statements\":[[0,\"Detail\"]],\"parameters\":[]},null],[0,\"\\n\"],[10],[0,\"\\n\\n\"],[14,1],[0,\"\\n\"]],\"hasEval\":false}", "meta": { "moduleName": "udaci-meals/templates/components/menu-item.hbs" } });
 });
 ;define("udaci-meals/templates/components/order-tracker", ["exports"], function (exports) {
   "use strict";
@@ -389,7 +400,7 @@ catch(err) {
 
 ;
           if (!runningTests) {
-            require("udaci-meals/app")["default"].create({"name":"udaci-meals","version":"0.0.0+4da6a4f2"});
+            require("udaci-meals/app")["default"].create({"name":"udaci-meals","version":"0.0.0+3b6fac40"});
           }
         
 //# sourceMappingURL=udaci-meals.map

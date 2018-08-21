@@ -1,5 +1,13 @@
 <h4>{{item.name}}</h4>
 <img src="/assets/images/{{item.image}}" alt="{{item.name}}">
+<div>
+  <select onchange={{action "changeCategory" value="target.value"}}>
+    <option value="breakfast">Breakfast</option>
+    <option value="lunch">Lunch</option>
+    <option value="dinner">Dinner</option>
+  </select>
+  <button {{action 'chooseItem' item.name}}>Select Item</button>
+</div>
 <p>
   {{#link-to 'item' item.id}}Detail{{/link-to}}
 </p>
