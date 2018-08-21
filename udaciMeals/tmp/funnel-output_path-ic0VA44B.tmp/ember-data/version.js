@@ -1,0 +1,1 @@
+/Users/MaiAwesomeMac/Desktop/learnToCode/ember-udacity/udaciMeals/tmp/creator-output_path-mdIq9yJn.tmp/version.js

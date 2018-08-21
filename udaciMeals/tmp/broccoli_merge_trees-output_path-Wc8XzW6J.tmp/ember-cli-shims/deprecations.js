@@ -1,0 +1,1 @@
+/Users/MaiAwesomeMac/Desktop/learnToCode/ember-udacity/udaciMeals/tmp/broccoli_merge_trees-input_base_path-b1BPJErW.tmp/1/ember-cli-shims/deprecations.js

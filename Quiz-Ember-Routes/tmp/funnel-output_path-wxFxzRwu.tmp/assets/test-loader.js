@@ -1,1 +1,0 @@
-/Users/MaiAwesomeMac/Desktop/learnToCode/ember-udacity/Quiz-Ember-Routes/tmp/funnel-input_base_path-rxYlfnf5.tmp/bower_components/ember-cli-test-loader/test-loader.js

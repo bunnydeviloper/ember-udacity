@@ -1,0 +1,1 @@
+export default Ember.HTMLBars.template({"id":"WOkHK3on","block":"{\"symbols\":[],\"statements\":[[1,[21,\"outlet\"],false]],\"hasEval\":false}","meta":{"moduleName":"udaci-meals/templates/item.hbs"}});

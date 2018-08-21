@@ -1,1 +1,0 @@
-/Users/MaiAwesomeMac/Desktop/learnToCode/ember-udacity/Quiz-Ember-Routes/tmp/broccoli_merge_trees-input_base_path-HWQpEMLx.tmp/0/routes-and-templates/tests/grader/lego-path-loads-brick-template-test.js
