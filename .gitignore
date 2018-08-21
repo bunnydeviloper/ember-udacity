@@ -16,6 +16,9 @@ Quiz-Ember-Handlebars/tmp/
 Quiz-Ember-1Dynamic/dist/
 Quiz-Ember-1Dynamic/tmp/
 
+Quiz-Ember-2Dynamic/dist/
+Quiz-Ember-2Dynamic/tmp/
+
 # dependencies
 
 udaciMeals/bower_components/
@@ -32,6 +35,9 @@ Quiz-Ember-Handlebars/node_modules/
 
 Quiz-Ember-1Dynamic/bower_components/
 Quiz-Ember-1Dynamic/node_modules/
+
+Quiz-Ember-2Dynamic/bower_components/
+Quiz-Ember-2Dynamic/node_modules/
 
 # misc
 
@@ -75,6 +81,14 @@ Quiz-Ember-1Dynamic/npm-debug.log*
 Quiz-Ember-1Dynamic/testem.log
 Quiz-Ember-1Dynamic/yarn-error.log
 
+Quiz-Ember-2Dynamic/.sass-cache
+Quiz-Ember-2Dynamic/connect.lock
+Quiz-Ember-2Dynamic/coverage/
+Quiz-Ember-2Dynamic/libpeerconnection.log
+Quiz-Ember-2Dynamic/npm-debug.log*
+Quiz-Ember-2Dynamic/testem.log
+Quiz-Ember-2Dynamic/yarn-error.log
+
 # ember-try
 
 udaciMeals/.node_modules.ember-try/
@@ -96,3 +110,7 @@ Quiz-Ember-Handlebars/package.json.ember-try
 Quiz-Ember-1Dynamic/.node_modules.ember-try/
 Quiz-Ember-1Dynamic/bower.json.ember-try
 Quiz-Ember-1Dynamic/package.json.ember-try
+
+Quiz-Ember-2Dynamic/.node_modules.ember-try/
+Quiz-Ember-2Dynamic/bower.json.ember-try
+Quiz-Ember-2Dynamic/package.json.ember-try
