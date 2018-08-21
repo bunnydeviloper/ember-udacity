@@ -4,7 +4,7 @@
   </div>
 
   {{#each-in orderManager.menuSelection as |day menuOrder|}}
-  <div>
+  <div {{action 'setDayTo' day}}>
     {{day}}
     <dl>
        <dt>Breakfast</dt>
