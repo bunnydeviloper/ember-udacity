@@ -4,6 +4,7 @@ export default Ember.HTMLBars.template((function() {
       "fragmentReason": {
         "name": "missing-wrapper",
         "problems": [
+          "multiple-nodes",
           "wrong-type"
         ]
       },
@@ -15,7 +16,7 @@ export default Ember.HTMLBars.template((function() {
           "column": 0
         },
         "end": {
-          "line": 2,
+          "line": 9,
           "column": 0
         }
       },
@@ -27,6 +28,41 @@ export default Ember.HTMLBars.template((function() {
     hasRendered: false,
     buildFragment: function buildFragment(dom) {
       var el0 = dom.createDocumentFragment();
+      var el1 = dom.createElement("h1");
+      dom.setAttribute(el1,"id","brick-heading");
+      var el2 = dom.createTextNode("Lego Bricks");
+      dom.appendChild(el1, el2);
+      dom.appendChild(el0, el1);
+      var el1 = dom.createTextNode("\n");
+      dom.appendChild(el0, el1);
+      var el1 = dom.createElement("ul");
+      dom.setAttribute(el1,"class","colors");
+      var el2 = dom.createTextNode("\n  ");
+      dom.appendChild(el1, el2);
+      var el2 = dom.createElement("li");
+      dom.setAttribute(el2,"id","red");
+      var el3 = dom.createTextNode("Red");
+      dom.appendChild(el2, el3);
+      dom.appendChild(el1, el2);
+      var el2 = dom.createTextNode("\n  ");
+      dom.appendChild(el1, el2);
+      var el2 = dom.createElement("li");
+      dom.setAttribute(el2,"id","blue");
+      var el3 = dom.createTextNode("Blue");
+      dom.appendChild(el2, el3);
+      dom.appendChild(el1, el2);
+      var el2 = dom.createTextNode("\n  ");
+      dom.appendChild(el1, el2);
+      var el2 = dom.createElement("li");
+      dom.setAttribute(el2,"id","green");
+      var el3 = dom.createTextNode("Green");
+      dom.appendChild(el2, el3);
+      dom.appendChild(el1, el2);
+      var el2 = dom.createTextNode("\n");
+      dom.appendChild(el1, el2);
+      dom.appendChild(el0, el1);
+      var el1 = dom.createTextNode("\n\n");
+      dom.appendChild(el0, el1);
       var el1 = dom.createComment("");
       dom.appendChild(el0, el1);
       var el1 = dom.createTextNode("\n");
@@ -35,12 +71,11 @@ export default Ember.HTMLBars.template((function() {
     },
     buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
       var morphs = new Array(1);
-      morphs[0] = dom.createMorphAt(fragment,0,0,contextualElement);
-      dom.insertBoundary(fragment, 0);
+      morphs[0] = dom.createMorphAt(fragment,4,4,contextualElement);
       return morphs;
     },
     statements: [
-      ["content","outlet",["loc",[null,[1,0],[1,10]]]]
+      ["content","outlet",["loc",[null,[8,0],[8,10]]]]
     ],
     locals: [],
     templates: []

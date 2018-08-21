@@ -5,7 +5,7 @@ define('routes-and-templates/router', ['exports', 'ember', 'routes-and-templates
   });
 
   Router.map(function () {
-    this.route('bricks');
+    this.route('bricks', { path: '/legos' });
   });
 
   exports['default'] = Router;
