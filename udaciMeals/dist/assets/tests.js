@@ -47,7 +47,7 @@ define('udaci-meals/tests/app.lint-test', [], function () {
 
   QUnit.test('services/order-manager.js', function (assert) {
     assert.expect(1);
-    assert.ok(true, 'services/order-manager.js should pass ESLint\n\n');
+    assert.ok(false, 'services/order-manager.js should pass ESLint\n\n5:3 - Only string, number, symbol, boolean, null, undefined, and function are allowed as default properties (ember/avoid-leaking-state-in-ember-objects)');
   });
 });
 define('udaci-meals/tests/integration/components/menu-item-test', ['qunit', 'ember-qunit', '@ember/test-helpers'], function (_qunit, _emberQunit, _testHelpers) {

@@ -37,7 +37,9 @@
   Object.defineProperty(exports, "__esModule", {
     value: true
   });
-  exports.default = Ember.Component.extend({});
+  exports.default = Ember.Component.extend({
+    orderManager: Ember.inject.service('order-manager')
+  });
 });
 ;define('udaci-meals/components/welcome-page', ['exports', 'ember-welcome-page/components/welcome-page'], function (exports, _welcomePage) {
   'use strict';
@@ -289,13 +291,40 @@
     }
   });
 });
+;define('udaci-meals/services/order-manager', ['exports'], function (exports) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = Ember.Service.extend({
+    selectedDay: 'Monday',
+    menuSelection: {
+      Monday: {},
+      Tuesday: {},
+      Wednesday: {},
+      Thursday: {},
+      Friday: {}
+    },
+
+    setSelectedDayTo(day) {
+      this.set('selectedDay', day);
+    },
+    chooseMenuOption(mealCategory, menuItemName) {
+      this.set('menuSelection.' + this.get('selectedDay') + '.' + mealCategory, menuItemName);
+    },
+    removeMenuOption(day, mealCategory) {
+      this.set('menuSelection.' + day + '.' + mealCategory, '');
+    }
+  });
+});
 ;define("udaci-meals/templates/application", ["exports"], function (exports) {
   "use strict";
 
   Object.defineProperty(exports, "__esModule", {
     value: true
   });
-  exports.default = Ember.HTMLBars.template({ "id": "kIxYGJLl", "block": "{\"symbols\":[],\"statements\":[[0,\"\\n\"],[1,[21,\"outlet\"],false],[0,\"\\n\"]],\"hasEval\":false}", "meta": { "moduleName": "udaci-meals/templates/application.hbs" } });
+  exports.default = Ember.HTMLBars.template({ "id": "12Wm7FNY", "block": "{\"symbols\":[],\"statements\":[[0,\"\\n\"],[7,\"h2\"],[11,\"id\",\"title\"],[9],[0,\"UdaciMeals - eat something tasty!\"],[10],[0,\"\\n\\n\"],[1,[21,\"order-tracker\"],false],[0,\"\\n\\n\"],[1,[21,\"outlet\"],false],[0,\"\\n\"]],\"hasEval\":false}", "meta": { "moduleName": "udaci-meals/templates/application.hbs" } });
 });
 ;define("udaci-meals/templates/components/menu-item", ["exports"], function (exports) {
   "use strict";
@@ -311,7 +340,7 @@
   Object.defineProperty(exports, "__esModule", {
     value: true
   });
-  exports.default = Ember.HTMLBars.template({ "id": "Vbqmq0Qz", "block": "{\"symbols\":[\"&default\"],\"statements\":[[14,1]],\"hasEval\":false}", "meta": { "moduleName": "udaci-meals/templates/components/order-tracker.hbs" } });
+  exports.default = Ember.HTMLBars.template({ "id": "0Y/YISYP", "block": "{\"symbols\":[\"menuOrder\",\"day\",\"&default\"],\"statements\":[[7,\"div\"],[11,\"class\",\"order-tracker\"],[9],[0,\"\\n  \"],[7,\"div\"],[9],[0,\"\\n    Select food for \"],[1,[23,[\"orderManager\",\"selectedDay\"]],false],[0,\"!\\n  \"],[10],[0,\"\\n\\n\"],[4,\"each\",[[27,\"-each-in\",[[23,[\"orderManager\",\"menuSelection\"]]],null]],null,{\"statements\":[[0,\"  \"],[7,\"div\"],[9],[0,\"\\n    \"],[1,[22,2,[]],false],[0,\"\\n    \"],[7,\"dl\"],[9],[0,\"\\n       \"],[7,\"dt\"],[9],[0,\"Breakfast\"],[10],[0,\"\\n       \"],[7,\"dd\"],[9],[1,[22,1,[\"breakfast\"]],false],[10],[0,\"\\n       \"],[7,\"dt\"],[9],[0,\"Lunch\"],[10],[0,\"\\n       \"],[7,\"dd\"],[9],[1,[22,1,[\"lunch\"]],false],[10],[0,\"\\n       \"],[7,\"dt\"],[9],[0,\"Dinner\"],[10],[0,\"\\n       \"],[7,\"dd\"],[9],[1,[22,1,[\"dinner\"]],false],[10],[0,\"\\n    \"],[10],[0,\"\\n  \"],[10],[0,\"\\n\"]],\"parameters\":[1,2]},null],[10],[0,\"\\n\\n\"],[14,3],[0,\"\\n\"]],\"hasEval\":false}", "meta": { "moduleName": "udaci-meals/templates/components/order-tracker.hbs" } });
 });
 ;define("udaci-meals/templates/item", ["exports"], function (exports) {
   "use strict";
@@ -335,7 +364,7 @@
   Object.defineProperty(exports, "__esModule", {
     value: true
   });
-  exports.default = Ember.HTMLBars.template({ "id": "h9lmOD6B", "block": "{\"symbols\":[\"item\"],\"statements\":[[0,\"Who's hungry?\\n\\n\"],[1,[27,\"log\",[[23,[\"model\"]]],null],false],[0,\"\\n\\n\"],[7,\"ul\"],[11,\"class\",\"items-container\"],[9],[0,\"\\n\"],[4,\"each\",[[23,[\"model\"]]],null,{\"statements\":[[0,\"    \"],[1,[27,\"menu-item\",null,[[\"item\"],[[22,1,[]]]]],false],[0,\"\\n\"]],\"parameters\":[1]},null],[10],[0,\"\\n\\n\"],[1,[21,\"outlet\"],false],[0,\"\\n\"]],\"hasEval\":false}", "meta": { "moduleName": "udaci-meals/templates/menu.hbs" } });
+  exports.default = Ember.HTMLBars.template({ "id": "SJ0x0omz", "block": "{\"symbols\":[\"item\"],\"statements\":[[7,\"h2\"],[9],[0,\"Who's hungry?\"],[10],[0,\"\\n\\n\"],[1,[27,\"log\",[[23,[\"model\"]]],null],false],[0,\"\\n\\n\"],[7,\"ul\"],[11,\"class\",\"items-container\"],[9],[0,\"\\n\"],[4,\"each\",[[23,[\"model\"]]],null,{\"statements\":[[0,\"    \"],[1,[27,\"menu-item\",null,[[\"item\"],[[22,1,[]]]]],false],[0,\"\\n\"]],\"parameters\":[1]},null],[10],[0,\"\\n\\n\"],[1,[21,\"outlet\"],false],[0,\"\\n\"]],\"hasEval\":false}", "meta": { "moduleName": "udaci-meals/templates/menu.hbs" } });
 });
 ;
 
@@ -360,7 +389,7 @@ catch(err) {
 
 ;
           if (!runningTests) {
-            require("udaci-meals/app")["default"].create({"name":"udaci-meals","version":"0.0.0+a885b518"});
+            require("udaci-meals/app")["default"].create({"name":"udaci-meals","version":"0.0.0+4da6a4f2"});
           }
         
 //# sourceMappingURL=udaci-meals.map
