@@ -49,7 +49,12 @@
     value: true
   });
   exports.default = Ember.Component.extend({
-    orderManager: Ember.inject.service('order-manager')
+    orderManager: Ember.inject.service('order-manager'),
+    actions: {
+      remove(day, menuCategory) {
+        this.get('orderManager').removeMenuOption(day, menuCategory);
+      }
+    }
   });
 });
 ;define('udaci-meals/components/welcome-page', ['exports', 'ember-welcome-page/components/welcome-page'], function (exports, _welcomePage) {
@@ -351,7 +356,7 @@
   Object.defineProperty(exports, "__esModule", {
     value: true
   });
-  exports.default = Ember.HTMLBars.template({ "id": "0Y/YISYP", "block": "{\"symbols\":[\"menuOrder\",\"day\",\"&default\"],\"statements\":[[7,\"div\"],[11,\"class\",\"order-tracker\"],[9],[0,\"\\n  \"],[7,\"div\"],[9],[0,\"\\n    Select food for \"],[1,[23,[\"orderManager\",\"selectedDay\"]],false],[0,\"!\\n  \"],[10],[0,\"\\n\\n\"],[4,\"each\",[[27,\"-each-in\",[[23,[\"orderManager\",\"menuSelection\"]]],null]],null,{\"statements\":[[0,\"  \"],[7,\"div\"],[9],[0,\"\\n    \"],[1,[22,2,[]],false],[0,\"\\n    \"],[7,\"dl\"],[9],[0,\"\\n       \"],[7,\"dt\"],[9],[0,\"Breakfast\"],[10],[0,\"\\n       \"],[7,\"dd\"],[9],[1,[22,1,[\"breakfast\"]],false],[10],[0,\"\\n       \"],[7,\"dt\"],[9],[0,\"Lunch\"],[10],[0,\"\\n       \"],[7,\"dd\"],[9],[1,[22,1,[\"lunch\"]],false],[10],[0,\"\\n       \"],[7,\"dt\"],[9],[0,\"Dinner\"],[10],[0,\"\\n       \"],[7,\"dd\"],[9],[1,[22,1,[\"dinner\"]],false],[10],[0,\"\\n    \"],[10],[0,\"\\n  \"],[10],[0,\"\\n\"]],\"parameters\":[1,2]},null],[10],[0,\"\\n\\n\"],[14,3],[0,\"\\n\"]],\"hasEval\":false}", "meta": { "moduleName": "udaci-meals/templates/components/order-tracker.hbs" } });
+  exports.default = Ember.HTMLBars.template({ "id": "aw3BkbsY", "block": "{\"symbols\":[\"menuOrder\",\"day\",\"&default\"],\"statements\":[[7,\"div\"],[11,\"class\",\"order-tracker\"],[9],[0,\"\\n  \"],[7,\"div\"],[9],[0,\"\\n    Select food for \"],[1,[23,[\"orderManager\",\"selectedDay\"]],false],[0,\"!\\n  \"],[10],[0,\"\\n\\n\"],[4,\"each\",[[27,\"-each-in\",[[23,[\"orderManager\",\"menuSelection\"]]],null]],null,{\"statements\":[[0,\"  \"],[7,\"div\"],[9],[0,\"\\n    \"],[1,[22,2,[]],false],[0,\"\\n    \"],[7,\"dl\"],[9],[0,\"\\n       \"],[7,\"dt\"],[9],[0,\"Breakfast\"],[10],[0,\"\\n       \"],[7,\"dd\"],[9],[0,\"\\n\"],[4,\"if\",[[22,1,[\"breakfast\"]]],null,{\"statements\":[[0,\"           \"],[1,[22,1,[\"breakfast\"]],false],[0,\" \"],[7,\"span\"],[11,\"class\",\"remove-item\"],[3,\"action\",[[22,0,[]],\"remove\",[22,2,[]],\"breakfast\"]],[9],[0,\"✖\"],[10],[0,\"\\n\"]],\"parameters\":[]},null],[0,\"       \"],[10],[0,\"\\n       \"],[7,\"dt\"],[9],[0,\"Lunch\"],[10],[0,\"\\n       \"],[7,\"dd\"],[9],[0,\"\\n\"],[4,\"if\",[[22,1,[\"lunch\"]]],null,{\"statements\":[[0,\"            \"],[1,[22,1,[\"lunch\"]],false],[0,\" \"],[7,\"span\"],[11,\"class\",\"remove-item\"],[3,\"action\",[[22,0,[]],\"remove\",[22,2,[]],\"lunch\"]],[9],[0,\"✖\"],[10],[0,\"\\n\"]],\"parameters\":[]},null],[0,\"       \"],[10],[0,\"\\n       \"],[7,\"dt\"],[9],[0,\"Dinner\"],[10],[0,\"\\n       \"],[7,\"dd\"],[9],[0,\"\\n\"],[4,\"if\",[[22,1,[\"dinner\"]]],null,{\"statements\":[[0,\"            \"],[1,[22,1,[\"dinner\"]],false],[0,\" \"],[7,\"span\"],[11,\"class\",\"remove-item\"],[3,\"action\",[[22,0,[]],\"remove\",[22,2,[]],\"dinner\"]],[9],[0,\"✖\"],[10],[0,\"\\n\"]],\"parameters\":[]},null],[0,\"       \"],[10],[0,\"\\n    \"],[10],[0,\"\\n  \"],[10],[0,\"\\n\"]],\"parameters\":[1,2]},null],[10],[0,\"\\n\\n\"],[14,3],[0,\"\\n\"]],\"hasEval\":false}", "meta": { "moduleName": "udaci-meals/templates/components/order-tracker.hbs" } });
 });
 ;define("udaci-meals/templates/item", ["exports"], function (exports) {
   "use strict";
