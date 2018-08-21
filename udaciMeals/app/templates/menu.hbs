@@ -8,7 +8,8 @@ Who's hungry?
     <h4>{{item.name}}</h4>
     <img src="/assets/images/{{item.image}}" alt="{{item.name}}">
     <p>
-      <a href="/item/{{item.id}}">Details</a>
+      <!-- <a href="/item/{{item.id}}">Details</a> -->
+      {{#link-to 'item' item.id}}Detail{{/link-to}}
     </p>
   </li>
   {{/each}}

@@ -4,6 +4,10 @@
 <p>
   {{model.description}}
 </p>
-<p><a href="{{model.id}}/nutrition">Nutrition</a></p>
+<p>
+  <!-- <a href="{{model.id}}/nutrition">Nutrition</a> -->
+  <!-- using link-to provided by Ember so page load faster -->
+  {{#link-to 'item.nutrition'}}Nutrition{{/link-to}}
+</p>
 
 {{outlet}}
