@@ -1,0 +1,29 @@
+[
+  {
+    "id": "chicken-salad",
+    "name": "Chicken Salad",
+    "image": "chicken-salad.jpg",
+    "source": "",
+    "photographer": "",
+    "calories": 230,
+    "rating": 4.1
+  },
+  {
+    "id": "chocolate-croissant",
+    "name": "Chocolate Croissant",
+    "image": "choco-croissant.jpg",
+    "source": "",
+    "photographer": "",
+    "calories": 406,
+    "rating": 4.5
+  },
+  {
+    "id": "strawberry-pudding",
+    "name": "Strawberry Pudding",
+    "image": "strawberry-pudding.jpg",
+    "source": "",
+    "photographer": "",
+    "calories": 190,
+    "rating": 4.3
+  }
+]
