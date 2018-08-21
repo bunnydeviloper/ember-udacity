@@ -9,6 +9,7 @@ Router.map(function() {
   this.route('toys');
   this.route('bricks', {path: 'bricks/:bricks_color'}, function() {
     this.route('red');
+    this.route('blue');
   });
 });
 
