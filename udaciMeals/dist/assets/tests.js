@@ -25,6 +25,11 @@ define('udaci-meals/tests/app.lint-test', [], function () {
     assert.ok(true, 'routes/item.js should pass ESLint\n\n');
   });
 
+  QUnit.test('routes/item/nutrition.js', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'routes/item/nutrition.js should pass ESLint\n\n');
+  });
+
   QUnit.test('routes/menu.js', function (assert) {
     assert.expect(1);
     assert.ok(true, 'routes/menu.js should pass ESLint\n\n');
@@ -52,6 +57,11 @@ define('udaci-meals/tests/tests.lint-test', [], function () {
     assert.ok(true, 'unit/routes/item-test.js should pass ESLint\n\n');
   });
 
+  QUnit.test('unit/routes/item/nutrition-test.js', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/routes/item/nutrition-test.js should pass ESLint\n\n');
+  });
+
   QUnit.test('unit/routes/menu-test.js', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/routes/menu-test.js should pass ESLint\n\n');
@@ -65,6 +75,18 @@ define('udaci-meals/tests/unit/routes/item-test', ['qunit', 'ember-qunit'], func
 
     (0, _qunit.test)('it exists', function (assert) {
       let route = this.owner.lookup('route:item');
+      assert.ok(route);
+    });
+  });
+});
+define('udaci-meals/tests/unit/routes/item/nutrition-test', ['qunit', 'ember-qunit'], function (_qunit, _emberQunit) {
+  'use strict';
+
+  (0, _qunit.module)('Unit | Route | item/nutrition', function (hooks) {
+    (0, _emberQunit.setupTest)(hooks);
+
+    (0, _qunit.test)('it exists', function (assert) {
+      let route = this.owner.lookup('route:item/nutrition');
       assert.ok(route);
     });
   });
