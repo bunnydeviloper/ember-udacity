@@ -216,7 +216,7 @@
 
   Router.map(function () {
     this.route('menu');
-    this.route('item');
+    this.route('item', { path: 'item/:item_name' });
   });
 
   exports.default = Router;
@@ -264,7 +264,7 @@
   Object.defineProperty(exports, "__esModule", {
     value: true
   });
-  exports.default = Ember.HTMLBars.template({ "id": "WOkHK3on", "block": "{\"symbols\":[],\"statements\":[[1,[21,\"outlet\"],false]],\"hasEval\":false}", "meta": { "moduleName": "udaci-meals/templates/item.hbs" } });
+  exports.default = Ember.HTMLBars.template({ "id": "hvtW5TqU", "block": "{\"symbols\":[],\"statements\":[[7,\"h4\"],[9],[0,\"Chocolate Croissant\"],[10],[0,\"\\n\"],[7,\"img\"],[11,\"width\",\"50%\"],[11,\"src\",\"/assets/images/choco-croissant.jpg\"],[11,\"alt\",\"Chocolate Croissant\"],[9],[10],[0,\"\\n\"],[7,\"p\"],[9],[0,\"4.5\"],[10],[0,\"\\n\"],[7,\"p\"],[9],[0,\"\\n  A savory, buttery, flaky croissant filled with dark semi-sweet chocolate.\\n\"],[10],[0,\"\\n\\n\"],[1,[21,\"outlet\"],false],[0,\"\\n\"]],\"hasEval\":false}", "meta": { "moduleName": "udaci-meals/templates/item.hbs" } });
 });
 ;define("udaci-meals/templates/menu", ["exports"], function (exports) {
   "use strict";
@@ -272,7 +272,7 @@
   Object.defineProperty(exports, "__esModule", {
     value: true
   });
-  exports.default = Ember.HTMLBars.template({ "id": "BrJC/N1s", "block": "{\"symbols\":[],\"statements\":[[0,\"Who's hungry?\\n\\n\"],[7,\"ul\"],[11,\"class\",\"items-container\"],[9],[0,\"\\n  \"],[7,\"li\"],[11,\"class\",\"menu-item\"],[9],[0,\"\\n    \"],[7,\"h4\"],[9],[0,\"Choco Croissant\"],[10],[0,\"\\n    \"],[7,\"img\"],[11,\"src\",\"/assets/images/choco-croissant.jpg\"],[11,\"alt\",\"Chocolate Croissant\"],[9],[10],[0,\"\\n  \"],[10],[0,\"\\n  \"],[7,\"li\"],[11,\"class\",\"menu-item\"],[9],[0,\"\\n    \"],[7,\"h4\"],[9],[0,\"Strawberry Pudding\"],[10],[0,\"\\n    \"],[7,\"img\"],[11,\"src\",\"/assets/images/strawberry-pudding.jpg\"],[11,\"alt\",\"Strawberry Pudding\"],[9],[10],[0,\"\\n  \"],[10],[0,\"\\n  \"],[7,\"li\"],[11,\"class\",\"menu-item\"],[9],[0,\"\\n    \"],[7,\"h4\"],[9],[0,\"Chicken Salad\"],[10],[0,\"\\n    \"],[7,\"img\"],[11,\"src\",\"/assets/images/chicken-salad.jpg\"],[11,\"alt\",\"Chicken Salad\"],[9],[10],[0,\"\\n  \"],[10],[0,\"\\n\"],[10],[0,\"\\n\\n\"],[1,[21,\"outlet\"],false],[0,\"\\n\"]],\"hasEval\":false}", "meta": { "moduleName": "udaci-meals/templates/menu.hbs" } });
+  exports.default = Ember.HTMLBars.template({ "id": "4xzCZQnR", "block": "{\"symbols\":[],\"statements\":[[0,\"Who's hungry?\\n\\n\"],[7,\"ul\"],[11,\"class\",\"items-container\"],[9],[0,\"\\n  \"],[7,\"li\"],[11,\"class\",\"menu-item\"],[9],[0,\"\\n    \"],[7,\"h4\"],[9],[0,\"Chocolate Croissant\"],[10],[0,\"\\n    \"],[7,\"img\"],[11,\"src\",\"/assets/images/choco-croissant.jpg\"],[11,\"alt\",\"Chocolate Croissant\"],[9],[10],[0,\"\\n    \"],[7,\"p\"],[9],[0,\"\\n      \"],[7,\"a\"],[11,\"href\",\"/item/choco-croissant\"],[9],[0,\"Details\"],[10],[0,\"\\n    \"],[10],[0,\"\\n  \"],[10],[0,\"\\n  \"],[7,\"li\"],[11,\"class\",\"menu-item\"],[9],[0,\"\\n    \"],[7,\"h4\"],[9],[0,\"Strawberry Pudding\"],[10],[0,\"\\n    \"],[7,\"img\"],[11,\"src\",\"/assets/images/strawberry-pudding.jpg\"],[11,\"alt\",\"Strawberry Pudding\"],[9],[10],[0,\"\\n    \"],[7,\"p\"],[9],[0,\"\\n      \"],[7,\"a\"],[11,\"href\",\"/item/strawberry-pudding\"],[9],[0,\"Details\"],[10],[0,\"\\n    \"],[10],[0,\"\\n  \"],[10],[0,\"\\n  \"],[7,\"li\"],[11,\"class\",\"menu-item\"],[9],[0,\"\\n    \"],[7,\"h4\"],[9],[0,\"Chicken Salad\"],[10],[0,\"\\n    \"],[7,\"img\"],[11,\"src\",\"/assets/images/chicken-salad.jpg\"],[11,\"alt\",\"Chicken Salad\"],[9],[10],[0,\"\\n    \"],[7,\"p\"],[9],[0,\"\\n      \"],[7,\"a\"],[11,\"href\",\"/item/chicken-salad\"],[9],[0,\"Details\"],[10],[0,\"\\n    \"],[10],[0,\"\\n  \"],[10],[0,\"\\n\"],[10],[0,\"\\n\\n\"],[1,[21,\"outlet\"],false],[0,\"\\n\"]],\"hasEval\":false}", "meta": { "moduleName": "udaci-meals/templates/menu.hbs" } });
 });
 ;
 
@@ -297,7 +297,7 @@ catch(err) {
 
 ;
           if (!runningTests) {
-            require("udaci-meals/app")["default"].create({"name":"udaci-meals","version":"0.0.0+70acfe5c"});
+            require("udaci-meals/app")["default"].create({"name":"udaci-meals","version":"0.0.0+540b9edb"});
           }
         
 //# sourceMappingURL=udaci-meals.map
