@@ -10,6 +10,11 @@ define('udaci-meals/tests/app.lint-test', [], function () {
     assert.ok(true, 'app.js should pass ESLint\n\n');
   });
 
+  QUnit.test('components/menu-item.js', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'components/menu-item.js should pass ESLint\n\n');
+  });
+
   QUnit.test('resolver.js', function (assert) {
     assert.expect(1);
     assert.ok(true, 'resolver.js should pass ESLint\n\n');
@@ -35,6 +40,35 @@ define('udaci-meals/tests/app.lint-test', [], function () {
     assert.ok(true, 'routes/menu.js should pass ESLint\n\n');
   });
 });
+define('udaci-meals/tests/integration/components/menu-item-test', ['qunit', 'ember-qunit', '@ember/test-helpers'], function (_qunit, _emberQunit, _testHelpers) {
+  'use strict';
+
+  (0, _qunit.module)('Integration | Component | menu-item', function (hooks) {
+    (0, _emberQunit.setupRenderingTest)(hooks);
+
+    (0, _qunit.test)('it renders', async function (assert) {
+      // Set any properties with this.set('myProperty', 'value');
+      // Handle any actions with this.set('myAction', function(val) { ... });
+
+      await (0, _testHelpers.render)(Ember.HTMLBars.template({
+        "id": "2bhlT/Qp",
+        "block": "{\"symbols\":[],\"statements\":[[1,[21,\"menu-item\"],false]],\"hasEval\":false}",
+        "meta": {}
+      }));
+
+      assert.equal(this.element.textContent.trim(), '');
+
+      // Template block usage:
+      await (0, _testHelpers.render)(Ember.HTMLBars.template({
+        "id": "wA+Su+06",
+        "block": "{\"symbols\":[],\"statements\":[[0,\"\\n\"],[4,\"menu-item\",null,null,{\"statements\":[[0,\"        template block text\\n\"]],\"parameters\":[]},null],[0,\"    \"]],\"hasEval\":false}",
+        "meta": {}
+      }));
+
+      assert.equal(this.element.textContent.trim(), 'template block text');
+    });
+  });
+});
 define('udaci-meals/tests/test-helper', ['udaci-meals/app', 'udaci-meals/config/environment', '@ember/test-helpers', 'ember-qunit'], function (_app, _environment, _testHelpers, _emberQunit) {
   'use strict';
 
@@ -46,6 +80,11 @@ define('udaci-meals/tests/tests.lint-test', [], function () {
   'use strict';
 
   QUnit.module('ESLint | tests');
+
+  QUnit.test('integration/components/menu-item-test.js', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'integration/components/menu-item-test.js should pass ESLint\n\n');
+  });
 
   QUnit.test('test-helper.js', function (assert) {
     assert.expect(1);

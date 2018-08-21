@@ -4,14 +4,7 @@ Who's hungry?
 
 <ul class="items-container">
   {{#each model as |item|}}
-  <li class="menu-item">
-    <h4>{{item.name}}</h4>
-    <img src="/assets/images/{{item.image}}" alt="{{item.name}}">
-    <p>
-      <!-- <a href="/item/{{item.id}}">Details</a> -->
-      {{#link-to 'item' item.id}}Detail{{/link-to}}
-    </p>
-  </li>
+    {{menu-item item=item}}
   {{/each}}
 </ul>
 

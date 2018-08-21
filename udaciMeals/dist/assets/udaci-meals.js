@@ -20,6 +20,17 @@
 
   exports.default = App;
 });
+;define('udaci-meals/components/menu-item', ['exports'], function (exports) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = Ember.Component.extend({
+    classNames: ['menu-item'],
+    tagName: 'li'
+  });
+});
 ;define('udaci-meals/components/welcome-page', ['exports', 'ember-welcome-page/components/welcome-page'], function (exports, _welcomePage) {
   'use strict';
 
@@ -278,6 +289,14 @@
   });
   exports.default = Ember.HTMLBars.template({ "id": "kIxYGJLl", "block": "{\"symbols\":[],\"statements\":[[0,\"\\n\"],[1,[21,\"outlet\"],false],[0,\"\\n\"]],\"hasEval\":false}", "meta": { "moduleName": "udaci-meals/templates/application.hbs" } });
 });
+;define("udaci-meals/templates/components/menu-item", ["exports"], function (exports) {
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = Ember.HTMLBars.template({ "id": "8+8SkHNj", "block": "{\"symbols\":[\"&default\"],\"statements\":[[7,\"h4\"],[9],[1,[23,[\"item\",\"name\"]],false],[10],[0,\"\\n\"],[7,\"img\"],[12,\"src\",[28,[\"/assets/images/\",[23,[\"item\",\"image\"]]]]],[12,\"alt\",[28,[[23,[\"item\",\"name\"]]]]],[9],[10],[0,\"\\n\"],[7,\"p\"],[9],[0,\"\\n  \"],[4,\"link-to\",[\"item\",[23,[\"item\",\"id\"]]],null,{\"statements\":[[0,\"Detail\"]],\"parameters\":[]},null],[0,\"\\n\"],[10],[0,\"\\n\\n\"],[14,1],[0,\"\\n\"]],\"hasEval\":false}", "meta": { "moduleName": "udaci-meals/templates/components/menu-item.hbs" } });
+});
 ;define("udaci-meals/templates/item", ["exports"], function (exports) {
   "use strict";
 
@@ -300,7 +319,7 @@
   Object.defineProperty(exports, "__esModule", {
     value: true
   });
-  exports.default = Ember.HTMLBars.template({ "id": "87rFrpzm", "block": "{\"symbols\":[\"item\"],\"statements\":[[0,\"Who's hungry?\\n\\n\"],[1,[27,\"log\",[[23,[\"model\"]]],null],false],[0,\"\\n\\n\"],[7,\"ul\"],[11,\"class\",\"items-container\"],[9],[0,\"\\n\"],[4,\"each\",[[23,[\"model\"]]],null,{\"statements\":[[0,\"  \"],[7,\"li\"],[11,\"class\",\"menu-item\"],[9],[0,\"\\n    \"],[7,\"h4\"],[9],[1,[22,1,[\"name\"]],false],[10],[0,\"\\n    \"],[7,\"img\"],[12,\"src\",[28,[\"/assets/images/\",[22,1,[\"image\"]]]]],[12,\"alt\",[28,[[22,1,[\"name\"]]]]],[9],[10],[0,\"\\n    \"],[7,\"p\"],[9],[0,\"\\n      \"],[2,\" <a href=\\\"/item/{{item.id}}\\\">Details</a> \"],[0,\"\\n      \"],[4,\"link-to\",[\"item\",[22,1,[\"id\"]]],null,{\"statements\":[[0,\"Detail\"]],\"parameters\":[]},null],[0,\"\\n    \"],[10],[0,\"\\n  \"],[10],[0,\"\\n\"]],\"parameters\":[1]},null],[10],[0,\"\\n\\n\"],[1,[21,\"outlet\"],false],[0,\"\\n\"]],\"hasEval\":false}", "meta": { "moduleName": "udaci-meals/templates/menu.hbs" } });
+  exports.default = Ember.HTMLBars.template({ "id": "h9lmOD6B", "block": "{\"symbols\":[\"item\"],\"statements\":[[0,\"Who's hungry?\\n\\n\"],[1,[27,\"log\",[[23,[\"model\"]]],null],false],[0,\"\\n\\n\"],[7,\"ul\"],[11,\"class\",\"items-container\"],[9],[0,\"\\n\"],[4,\"each\",[[23,[\"model\"]]],null,{\"statements\":[[0,\"    \"],[1,[27,\"menu-item\",null,[[\"item\"],[[22,1,[]]]]],false],[0,\"\\n\"]],\"parameters\":[1]},null],[10],[0,\"\\n\\n\"],[1,[21,\"outlet\"],false],[0,\"\\n\"]],\"hasEval\":false}", "meta": { "moduleName": "udaci-meals/templates/menu.hbs" } });
 });
 ;
 
@@ -325,7 +344,7 @@ catch(err) {
 
 ;
           if (!runningTests) {
-            require("udaci-meals/app")["default"].create({"name":"udaci-meals","version":"0.0.0+6321b097"});
+            require("udaci-meals/app")["default"].create({"name":"udaci-meals","version":"0.0.0+1e2776b8"});
           }
         
 //# sourceMappingURL=udaci-meals.map
