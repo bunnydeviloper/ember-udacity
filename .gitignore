@@ -7,12 +7,18 @@ udaciMeals/tmp/
 Quiz-Ember-Routes/dist/
 Quiz-Ember-Routes/tmp/
 
+Quiz-Ember-Nested/dist/
+Quiz-Ember-Nested/tmp/
+
 # dependencies
 udaciMeals/bower_components/
 udaciMeals/node_modules/
 
 Quiz-Ember-Routes/bower_components/
 Quiz-Ember-Routes/node_modules/
+
+Quiz-Ember-Nested/bower_components/
+Quiz-Ember-Nested/node_modules/
 
 # misc
 udaciMeals/.sass-cache
@@ -27,9 +33,17 @@ Quiz-Ember-Routes/.sass-cache
 Quiz-Ember-Routes/connect.lock
 Quiz-Ember-Routes/coverage/
 Quiz-Ember-Routes/libpeerconnection.log
-uiz-Ember-Routes/npm-debug.log*
+Quiz-Ember-Routes/npm-debug.log*
 Quiz-Ember-Routes/testem.log
 Quiz-Ember-Routes/yarn-error.log
+
+Quiz-Ember-Nested/.sass-cache
+Quiz-Ember-Nested/connect.lock
+Quiz-Ember-Nested/coverage/
+Quiz-Ember-Nested/libpeerconnection.log
+Quiz-Ember-Nested/npm-debug.log*
+Quiz-Ember-Nested/testem.log
+Quiz-Ember-Nested/yarn-error.log
 
 # ember-try
 udaciMeals/.node_modules.ember-try/
@@ -39,3 +53,7 @@ udaciMeals/package.json.ember-try
 Quiz-Ember-Routes/.node_modules.ember-try/
 Quiz-Ember-Routes/bower.json.ember-try
 Quiz-Ember-Routes/package.json.ember-try
+
+Quiz-Ember-Nested/.node_modules.ember-try/
+Quiz-Ember-Nested/bower.json.ember-try
+Quiz-Ember-Nested/package.json.ember-try
