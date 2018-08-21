@@ -1,0 +1,1 @@
+/Users/MaiAwesomeMac/Desktop/learnToCode/ember-udacity/Quiz-Ember-Routes/bower_components/ember-cli-test-loader/test-loader.js

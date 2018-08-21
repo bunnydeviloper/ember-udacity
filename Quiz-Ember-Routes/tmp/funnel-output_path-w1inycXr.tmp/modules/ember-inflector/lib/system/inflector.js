@@ -1,0 +1,1 @@
+/Users/MaiAwesomeMac/Desktop/learnToCode/ember-udacity/Quiz-Ember-Routes/tmp/funnel-input_base_path-I8ZEH8k7.tmp/lib/system/inflector.js

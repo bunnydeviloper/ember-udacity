@@ -1,0 +1,1 @@
+/Users/MaiAwesomeMac/Desktop/learnToCode/ember-udacity/Quiz-Ember-Routes/tmp/funnel-input_base_path-cGPa57pQ.tmp/components/app-version.js

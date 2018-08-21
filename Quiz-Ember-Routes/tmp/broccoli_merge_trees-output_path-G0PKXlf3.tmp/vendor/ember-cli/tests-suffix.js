@@ -1,0 +1,1 @@
+/Users/MaiAwesomeMac/Desktop/learnToCode/ember-udacity/Quiz-Ember-Routes/tmp/config_replace-output_path-QbzFeaHR.tmp/tests-suffix.js

@@ -1,0 +1,1 @@
+/Users/MaiAwesomeMac/Desktop/learnToCode/ember-udacity/Quiz-Ember-Routes/tmp/broccoli_merge_trees-input_base_path-Z8SR285y.tmp/1/ember-test-helpers.js
