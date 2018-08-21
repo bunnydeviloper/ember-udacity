@@ -1,9 +1,9 @@
-<h4>Chocolate Croissant</h4>
-<img width="50%" src="/assets/images/choco-croissant.jpg" alt="Chocolate Croissant">
-<p>4.5</p>
+<h4>{{model.name}}</h4>
+<img width="50%" src="/assets/images/{{model.image}}" alt="{{model.name}}">
+<p>{{model.rating}}</p>
 <p>
-  A savory, buttery, flaky croissant filled with dark semi-sweet chocolate.
+  {{model.description}}
 </p>
-<p><a href="choco-croissant/nutrition">Nutrition</a></p>
+<p><a href="{{model.id}}/nutrition">Nutrition</a></p>
 
 {{outlet}}

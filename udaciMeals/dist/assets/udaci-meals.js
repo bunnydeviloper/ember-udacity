@@ -229,7 +229,11 @@
   Object.defineProperty(exports, "__esModule", {
     value: true
   });
-  exports.default = Ember.Route.extend({});
+  exports.default = Ember.Route.extend({
+    model(params) {
+      return Ember.$.get('/menu/' + params.item_name + '.json');
+    }
+  });
 });
 ;define('udaci-meals/routes/item/nutrition', ['exports'], function (exports) {
   'use strict';
@@ -280,7 +284,7 @@
   Object.defineProperty(exports, "__esModule", {
     value: true
   });
-  exports.default = Ember.HTMLBars.template({ "id": "ch8lCqNZ", "block": "{\"symbols\":[],\"statements\":[[7,\"h4\"],[9],[0,\"Chocolate Croissant\"],[10],[0,\"\\n\"],[7,\"img\"],[11,\"width\",\"50%\"],[11,\"src\",\"/assets/images/choco-croissant.jpg\"],[11,\"alt\",\"Chocolate Croissant\"],[9],[10],[0,\"\\n\"],[7,\"p\"],[9],[0,\"4.5\"],[10],[0,\"\\n\"],[7,\"p\"],[9],[0,\"\\n  A savory, buttery, flaky croissant filled with dark semi-sweet chocolate.\\n\"],[10],[0,\"\\n\"],[7,\"p\"],[9],[7,\"a\"],[11,\"href\",\"choco-croissant/nutrition\"],[9],[0,\"Nutrition\"],[10],[10],[0,\"\\n\\n\"],[1,[21,\"outlet\"],false],[0,\"\\n\"]],\"hasEval\":false}", "meta": { "moduleName": "udaci-meals/templates/item.hbs" } });
+  exports.default = Ember.HTMLBars.template({ "id": "r3NEVxD4", "block": "{\"symbols\":[],\"statements\":[[7,\"h4\"],[9],[1,[23,[\"model\",\"name\"]],false],[10],[0,\"\\n\"],[7,\"img\"],[11,\"width\",\"50%\"],[12,\"src\",[28,[\"/assets/images/\",[23,[\"model\",\"image\"]]]]],[12,\"alt\",[28,[[23,[\"model\",\"name\"]]]]],[9],[10],[0,\"\\n\"],[7,\"p\"],[9],[1,[23,[\"model\",\"rating\"]],false],[10],[0,\"\\n\"],[7,\"p\"],[9],[0,\"\\n  \"],[1,[23,[\"model\",\"description\"]],false],[0,\"\\n\"],[10],[0,\"\\n\"],[7,\"p\"],[9],[7,\"a\"],[12,\"href\",[28,[[23,[\"model\",\"id\"]],\"/nutrition\"]]],[9],[0,\"Nutrition\"],[10],[10],[0,\"\\n\\n\"],[1,[21,\"outlet\"],false],[0,\"\\n\"]],\"hasEval\":false}", "meta": { "moduleName": "udaci-meals/templates/item.hbs" } });
 });
 ;define("udaci-meals/templates/item/nutrition", ["exports"], function (exports) {
   "use strict";
