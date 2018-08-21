@@ -1,116 +1,26 @@
 # See https://help.github.com/ignore-files/ for more about ignoring files.
 
 # compiled output
-udaciMeals/dist/
-udaciMeals/tmp/
-
-Quiz-Ember-Routes/dist/
-Quiz-Ember-Routes/tmp/
-
-Quiz-Ember-Nested/dist/
-Quiz-Ember-Nested/tmp/
-
-Quiz-Ember-Handlebars/dist/
-Quiz-Ember-Handlebars/tmp/
-
-Quiz-Ember-1Dynamic/dist/
-Quiz-Ember-1Dynamic/tmp/
-
-Quiz-Ember-2Dynamic/dist/
-Quiz-Ember-2Dynamic/tmp/
+**/dist/
+**/tmp/
 
 # dependencies
 
-udaciMeals/bower_components/
-udaciMeals/node_modules/
-
-Quiz-Ember-Routes/bower_components/
-Quiz-Ember-Routes/node_modules/
-
-Quiz-Ember-Nested/bower_components/
-Quiz-Ember-Nested/node_modules/
-
-Quiz-Ember-Handlebars/bower_components/
-Quiz-Ember-Handlebars/node_modules/
-
-Quiz-Ember-1Dynamic/bower_components/
-Quiz-Ember-1Dynamic/node_modules/
-
-Quiz-Ember-2Dynamic/bower_components/
-Quiz-Ember-2Dynamic/node_modules/
+**/bower_components/
+**/node_modules/
 
 # misc
 
-udaciMeals/.sass-cache
-udaciMeals/connect.lock
-udaciMeals/coverage/
-udaciMeals/libpeerconnection.log
-udaciMeals/npm-debug.log*
-udaciMeals/testem.log
-udaciMeals/yarn-error.log
-
-Quiz-Ember-Routes/.sass-cache
-Quiz-Ember-Routes/connect.lock
-Quiz-Ember-Routes/coverage/
-Quiz-Ember-Routes/libpeerconnection.log
-Quiz-Ember-Routes/npm-debug.log*
-Quiz-Ember-Routes/testem.log
-Quiz-Ember-Routes/yarn-error.log
-
-Quiz-Ember-Nested/.sass-cache
-Quiz-Ember-Nested/connect.lock
-Quiz-Ember-Nested/coverage/
-Quiz-Ember-Nested/libpeerconnection.log
-Quiz-Ember-Nested/npm-debug.log*
-Quiz-Ember-Nested/testem.log
-Quiz-Ember-Nested/yarn-error.log
-
-Quiz-Ember-Handlebars/.sass-cache
-Quiz-Ember-Handlebars/connect.lock
-Quiz-Ember-Handlebars/coverage/
-Quiz-Ember-Handlebars/libpeerconnection.log
-Quiz-Ember-Handlebars/npm-debug.log*
-Quiz-Ember-Handlebars/testem.log
-Quiz-Ember-Handlebars/yarn-error.log
-
-Quiz-Ember-1Dynamic/.sass-cache
-Quiz-Ember-1Dynamic/connect.lock
-Quiz-Ember-1Dynamic/coverage/
-Quiz-Ember-1Dynamic/libpeerconnection.log
-Quiz-Ember-1Dynamic/npm-debug.log*
-Quiz-Ember-1Dynamic/testem.log
-Quiz-Ember-1Dynamic/yarn-error.log
-
-Quiz-Ember-2Dynamic/.sass-cache
-Quiz-Ember-2Dynamic/connect.lock
-Quiz-Ember-2Dynamic/coverage/
-Quiz-Ember-2Dynamic/libpeerconnection.log
-Quiz-Ember-2Dynamic/npm-debug.log*
-Quiz-Ember-2Dynamic/testem.log
-Quiz-Ember-2Dynamic/yarn-error.log
+**/.sass-cache
+**/connect.lock
+**/coverage/
+**/libpeerconnection.log
+**/npm-debug.log*
+**/testem.log
+**/yarn-error.log
 
 # ember-try
 
-udaciMeals/.node_modules.ember-try/
-udaciMeals/bower.json.ember-try
-udaciMeals/package.json.ember-try
-
-Quiz-Ember-Routes/.node_modules.ember-try/
-Quiz-Ember-Routes/bower.json.ember-try
-Quiz-Ember-Routes/package.json.ember-try
-
-Quiz-Ember-Nested/.node_modules.ember-try/
-Quiz-Ember-Nested/bower.json.ember-try
-Quiz-Ember-Nested/package.json.ember-try
-
-Quiz-Ember-Handlebars/.node_modules.ember-try/
-Quiz-Ember-Handlebars/bower.json.ember-try
-Quiz-Ember-Handlebars/package.json.ember-try
-
-Quiz-Ember-1Dynamic/.node_modules.ember-try/
-Quiz-Ember-1Dynamic/bower.json.ember-try
-Quiz-Ember-1Dynamic/package.json.ember-try
-
-Quiz-Ember-2Dynamic/.node_modules.ember-try/
-Quiz-Ember-2Dynamic/bower.json.ember-try
-Quiz-Ember-2Dynamic/package.json.ember-try
+**/.node_modules.ember-try/
+**/bower.json.ember-try
+**/package.json.ember-try
