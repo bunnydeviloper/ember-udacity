@@ -1,27 +1,17 @@
 Who's hungry?
 
+{{log model}}
+
 <ul class="items-container">
+  {{#each model as |item|}}
   <li class="menu-item">
-    <h4>Chocolate Croissant</h4>
-    <img src="/assets/images/choco-croissant.jpg" alt="Chocolate Croissant">
+    <h4>{{item.name}}</h4>
+    <img src="/assets/images/{{item.image}}" alt="{{item.name}}">
     <p>
-      <a href="/item/choco-croissant">Details</a>
+      <a href="/item/{{item.id}}">Details</a>
     </p>
   </li>
-  <li class="menu-item">
-    <h4>Strawberry Pudding</h4>
-    <img src="/assets/images/strawberry-pudding.jpg" alt="Strawberry Pudding">
-    <p>
-      <a href="/item/strawberry-pudding">Details</a>
-    </p>
-  </li>
-  <li class="menu-item">
-    <h4>Chicken Salad</h4>
-    <img src="/assets/images/chicken-salad.jpg" alt="Chicken Salad">
-    <p>
-      <a href="/item/chicken-salad">Details</a>
-    </p>
-  </li>
+  {{/each}}
 </ul>
 
 {{outlet}}

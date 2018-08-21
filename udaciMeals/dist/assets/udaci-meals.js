@@ -245,7 +245,13 @@
   Object.defineProperty(exports, "__esModule", {
     value: true
   });
-  exports.default = Ember.Route.extend({});
+  exports.default = Ember.Route.extend({
+    model() {
+      // same as: model: function() {, just new syntax
+      return Ember.$.get('/menu/menu.json');
+      // same as: return Ember.$.get('/menu/menu.json');
+    }
+  });
 });
 ;define('udaci-meals/services/ajax', ['exports', 'ember-ajax/services/ajax'], function (exports, _ajax) {
   'use strict';
@@ -290,7 +296,7 @@
   Object.defineProperty(exports, "__esModule", {
     value: true
   });
-  exports.default = Ember.HTMLBars.template({ "id": "4xzCZQnR", "block": "{\"symbols\":[],\"statements\":[[0,\"Who's hungry?\\n\\n\"],[7,\"ul\"],[11,\"class\",\"items-container\"],[9],[0,\"\\n  \"],[7,\"li\"],[11,\"class\",\"menu-item\"],[9],[0,\"\\n    \"],[7,\"h4\"],[9],[0,\"Chocolate Croissant\"],[10],[0,\"\\n    \"],[7,\"img\"],[11,\"src\",\"/assets/images/choco-croissant.jpg\"],[11,\"alt\",\"Chocolate Croissant\"],[9],[10],[0,\"\\n    \"],[7,\"p\"],[9],[0,\"\\n      \"],[7,\"a\"],[11,\"href\",\"/item/choco-croissant\"],[9],[0,\"Details\"],[10],[0,\"\\n    \"],[10],[0,\"\\n  \"],[10],[0,\"\\n  \"],[7,\"li\"],[11,\"class\",\"menu-item\"],[9],[0,\"\\n    \"],[7,\"h4\"],[9],[0,\"Strawberry Pudding\"],[10],[0,\"\\n    \"],[7,\"img\"],[11,\"src\",\"/assets/images/strawberry-pudding.jpg\"],[11,\"alt\",\"Strawberry Pudding\"],[9],[10],[0,\"\\n    \"],[7,\"p\"],[9],[0,\"\\n      \"],[7,\"a\"],[11,\"href\",\"/item/strawberry-pudding\"],[9],[0,\"Details\"],[10],[0,\"\\n    \"],[10],[0,\"\\n  \"],[10],[0,\"\\n  \"],[7,\"li\"],[11,\"class\",\"menu-item\"],[9],[0,\"\\n    \"],[7,\"h4\"],[9],[0,\"Chicken Salad\"],[10],[0,\"\\n    \"],[7,\"img\"],[11,\"src\",\"/assets/images/chicken-salad.jpg\"],[11,\"alt\",\"Chicken Salad\"],[9],[10],[0,\"\\n    \"],[7,\"p\"],[9],[0,\"\\n      \"],[7,\"a\"],[11,\"href\",\"/item/chicken-salad\"],[9],[0,\"Details\"],[10],[0,\"\\n    \"],[10],[0,\"\\n  \"],[10],[0,\"\\n\"],[10],[0,\"\\n\\n\"],[1,[21,\"outlet\"],false],[0,\"\\n\"]],\"hasEval\":false}", "meta": { "moduleName": "udaci-meals/templates/menu.hbs" } });
+  exports.default = Ember.HTMLBars.template({ "id": "gorHFilo", "block": "{\"symbols\":[\"item\"],\"statements\":[[0,\"Who's hungry?\\n\\n\"],[1,[27,\"log\",[[23,[\"model\"]]],null],false],[0,\"\\n\\n\"],[7,\"ul\"],[11,\"class\",\"items-container\"],[9],[0,\"\\n\"],[4,\"each\",[[23,[\"model\"]]],null,{\"statements\":[[0,\"  \"],[7,\"li\"],[11,\"class\",\"menu-item\"],[9],[0,\"\\n    \"],[7,\"h4\"],[9],[1,[22,1,[\"name\"]],false],[10],[0,\"\\n    \"],[7,\"img\"],[12,\"src\",[28,[\"/assets/images/\",[22,1,[\"image\"]]]]],[12,\"alt\",[28,[[22,1,[\"name\"]]]]],[9],[10],[0,\"\\n    \"],[7,\"p\"],[9],[0,\"\\n      \"],[7,\"a\"],[12,\"href\",[28,[\"/item/\",[22,1,[\"id\"]]]]],[9],[0,\"Details\"],[10],[0,\"\\n    \"],[10],[0,\"\\n  \"],[10],[0,\"\\n\"]],\"parameters\":[1]},null],[10],[0,\"\\n\\n\"],[1,[21,\"outlet\"],false],[0,\"\\n\"]],\"hasEval\":false}", "meta": { "moduleName": "udaci-meals/templates/menu.hbs" } });
 });
 ;
 
@@ -315,7 +321,7 @@ catch(err) {
 
 ;
           if (!runningTests) {
-            require("udaci-meals/app")["default"].create({"name":"udaci-meals","version":"0.0.0+540b9edb"});
+            require("udaci-meals/app")["default"].create({"name":"udaci-meals","version":"0.0.0+6321b097"});
           }
         
 //# sourceMappingURL=udaci-meals.map
