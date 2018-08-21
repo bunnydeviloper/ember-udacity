@@ -1,0 +1,1 @@
+/Users/MaiAwesomeMac/Desktop/learnToCode/ember-udaciMeals/udaciMeals/tmp/funnel-input_base_path-xgUid6Kv.tmp/components/welcome-page.js
