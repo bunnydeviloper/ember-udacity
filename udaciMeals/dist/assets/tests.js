@@ -15,6 +15,11 @@ define('udaci-meals/tests/app.lint-test', [], function () {
     assert.ok(true, 'components/menu-item.js should pass ESLint\n\n');
   });
 
+  QUnit.test('components/order-tracker.js', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'components/order-tracker.js should pass ESLint\n\n');
+  });
+
   QUnit.test('resolver.js', function (assert) {
     assert.expect(1);
     assert.ok(true, 'resolver.js should pass ESLint\n\n');
@@ -69,6 +74,35 @@ define('udaci-meals/tests/integration/components/menu-item-test', ['qunit', 'emb
     });
   });
 });
+define('udaci-meals/tests/integration/components/order-tracker-test', ['qunit', 'ember-qunit', '@ember/test-helpers'], function (_qunit, _emberQunit, _testHelpers) {
+  'use strict';
+
+  (0, _qunit.module)('Integration | Component | order-tracker', function (hooks) {
+    (0, _emberQunit.setupRenderingTest)(hooks);
+
+    (0, _qunit.test)('it renders', async function (assert) {
+      // Set any properties with this.set('myProperty', 'value');
+      // Handle any actions with this.set('myAction', function(val) { ... });
+
+      await (0, _testHelpers.render)(Ember.HTMLBars.template({
+        "id": "ZrpSiM4G",
+        "block": "{\"symbols\":[],\"statements\":[[1,[21,\"order-tracker\"],false]],\"hasEval\":false}",
+        "meta": {}
+      }));
+
+      assert.equal(this.element.textContent.trim(), '');
+
+      // Template block usage:
+      await (0, _testHelpers.render)(Ember.HTMLBars.template({
+        "id": "jag8ahFB",
+        "block": "{\"symbols\":[],\"statements\":[[0,\"\\n\"],[4,\"order-tracker\",null,null,{\"statements\":[[0,\"        template block text\\n\"]],\"parameters\":[]},null],[0,\"    \"]],\"hasEval\":false}",
+        "meta": {}
+      }));
+
+      assert.equal(this.element.textContent.trim(), 'template block text');
+    });
+  });
+});
 define('udaci-meals/tests/test-helper', ['udaci-meals/app', 'udaci-meals/config/environment', '@ember/test-helpers', 'ember-qunit'], function (_app, _environment, _testHelpers, _emberQunit) {
   'use strict';
 
@@ -84,6 +118,11 @@ define('udaci-meals/tests/tests.lint-test', [], function () {
   QUnit.test('integration/components/menu-item-test.js', function (assert) {
     assert.expect(1);
     assert.ok(true, 'integration/components/menu-item-test.js should pass ESLint\n\n');
+  });
+
+  QUnit.test('integration/components/order-tracker-test.js', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'integration/components/order-tracker-test.js should pass ESLint\n\n');
   });
 
   QUnit.test('test-helper.js', function (assert) {

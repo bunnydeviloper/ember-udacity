@@ -31,6 +31,14 @@
     tagName: 'li'
   });
 });
+;define('udaci-meals/components/order-tracker', ['exports'], function (exports) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = Ember.Component.extend({});
+});
 ;define('udaci-meals/components/welcome-page', ['exports', 'ember-welcome-page/components/welcome-page'], function (exports, _welcomePage) {
   'use strict';
 
@@ -297,6 +305,14 @@
   });
   exports.default = Ember.HTMLBars.template({ "id": "8+8SkHNj", "block": "{\"symbols\":[\"&default\"],\"statements\":[[7,\"h4\"],[9],[1,[23,[\"item\",\"name\"]],false],[10],[0,\"\\n\"],[7,\"img\"],[12,\"src\",[28,[\"/assets/images/\",[23,[\"item\",\"image\"]]]]],[12,\"alt\",[28,[[23,[\"item\",\"name\"]]]]],[9],[10],[0,\"\\n\"],[7,\"p\"],[9],[0,\"\\n  \"],[4,\"link-to\",[\"item\",[23,[\"item\",\"id\"]]],null,{\"statements\":[[0,\"Detail\"]],\"parameters\":[]},null],[0,\"\\n\"],[10],[0,\"\\n\\n\"],[14,1],[0,\"\\n\"]],\"hasEval\":false}", "meta": { "moduleName": "udaci-meals/templates/components/menu-item.hbs" } });
 });
+;define("udaci-meals/templates/components/order-tracker", ["exports"], function (exports) {
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = Ember.HTMLBars.template({ "id": "Vbqmq0Qz", "block": "{\"symbols\":[\"&default\"],\"statements\":[[14,1]],\"hasEval\":false}", "meta": { "moduleName": "udaci-meals/templates/components/order-tracker.hbs" } });
+});
 ;define("udaci-meals/templates/item", ["exports"], function (exports) {
   "use strict";
 
@@ -344,7 +360,7 @@ catch(err) {
 
 ;
           if (!runningTests) {
-            require("udaci-meals/app")["default"].create({"name":"udaci-meals","version":"0.0.0+1e2776b8"});
+            require("udaci-meals/app")["default"].create({"name":"udaci-meals","version":"0.0.0+a885b518"});
           }
         
 //# sourceMappingURL=udaci-meals.map
